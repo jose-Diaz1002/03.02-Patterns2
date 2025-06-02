@@ -9,8 +9,6 @@ public class PizzaHawaian {
     private Size size;
     private final Topping topping = Topping.HAWAIANA;
 
-
-
     public PizzaHawaian(Dough dough, Size size) {
         this.dough = dough;
         this.size = size;
@@ -44,6 +42,5 @@ public class PizzaHawaian {
                 "\n size=" + size +
                 "\n topping=" + topping;
     }
-
 
 }

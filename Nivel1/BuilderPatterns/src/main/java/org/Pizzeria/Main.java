@@ -1,7 +1,6 @@
 package org.Pizzeria;
 
 import org.Pizzeria.core.Pizza;
-import org.Pizzeria.domain.PizzaHawaian;
 import org.Pizzeria.enums.Dough;
 import org.Pizzeria.enums.Size;
 import org.Pizzeria.enums.Topping;
@@ -21,15 +20,6 @@ public class Main {
                 .setTopping(Topping.PEPPERONI)
                 .build();
         System.out.println(pizza);
-
-        Pizza pizza1 = new Pizza.MestrePizzer()
-                .setDough(Dough.PREMIUN)
-                .setSize(Size.PREMIUN)
-                .setTopping(Topping.SAUCE)
-                .setTopping(Topping.PREMIUN)
-
-                .build();
-        System.out.println(pizza1);
 
     }
 

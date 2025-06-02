@@ -20,7 +20,7 @@ public class Pizza {
     public Pizza() {
     }
 
-    public Pizza(Dough dough, Size size, List<Topping> topping,PizzaHawaian pizzaHawaian, PizzaVegetarian pizzaVegetarian) {
+    public Pizza(Dough dough, Size size, List<Topping> topping, PizzaHawaian pizzaHawaian, PizzaVegetarian pizzaVegetarian) {
         this.dough = dough;
         this.size = size;
         this.topping = topping;
@@ -29,7 +29,7 @@ public class Pizza {
     }
     //clase interna 1
 
-    public static class PizzaBuilder implements IBuilder<Pizza>{
+    public static class PizzaBuilder implements IBuilder<Pizza> {
 
         private Dough dough;
         private Size size;
@@ -64,8 +64,8 @@ public class Pizza {
             return this;
         }
 
-        public PizzaBuilder setPizzaHawaian(Dough dough,Size size) {
-            this.pizzaHawaian = new PizzaHawaian(dough,size);
+        public PizzaBuilder setPizzaHawaian(Dough dough, Size size) {
+            this.pizzaHawaian = new PizzaHawaian(dough, size);
             return this;
         }
 
@@ -76,48 +76,11 @@ public class Pizza {
 
         @Override
         public Pizza build() {
-            return new Pizza(dough,size,topping ,pizzaHawaian,pizzaVegetarian );
+            return new Pizza(dough, size, topping, pizzaHawaian, pizzaVegetarian);
         }
-
 
     }
-    //clase interna 2 MestrePizzer
 
-    public static class MestrePizzer implements IBuilder<Pizza>{
-
-        private Dough dough;
-        private Size size;
-        private List<Topping> topping = new ArrayList<>();
-
-        public MestrePizzer() {
-        }
-
-        public MestrePizzer(Dough dough, Size size, List<Topping> topping) {
-            this.dough = dough;
-            this.size = size;
-            this.topping = topping;
-        }
-
-        public MestrePizzer setDough(Dough dough) {
-            this.dough = dough;
-            return this;
-        }
-
-        public MestrePizzer setSize(Size size) {
-            this.size = size;
-            return this;
-        }
-
-        public MestrePizzer setTopping(Topping topping) {
-            this.topping.add(topping);
-            return this;
-        }
-
-        @Override
-        public Pizza build() {
-            return new Pizza();
-        }
-    }
     public Dough getDough() {
         return dough;
     }
@@ -160,12 +123,13 @@ public class Pizza {
 
     @Override
     public String toString() {
-        return "\n--------Pizza--------" +
+        return "\n--------Mestre Pizzer--------" +
                 "\nDough=" + dough +
                 "\nsize=" + size +
                 "\ntopping=" + topping +
-                "\n"+ pizzaHawaian +
+                "\n" + pizzaHawaian +
                 "\n" + pizzaVegetarian +
                 '}';
     }
+
 }
